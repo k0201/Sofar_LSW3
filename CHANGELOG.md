@@ -46,8 +46,8 @@ To use InfluxDB support:
 1. Install InfluxDB
 2. Create database to store data (i.e: create database Data)
 3. Configure InfluxDB options in config.cfg
-4. Add InfluxDB datasource in Grafana
-5. Import grafana_ifdb_en/pl.json file (Dashboards->Manage->Import). Both filed not available yet !
+4. Add InfluxDB datasource in Grafana (name it InfluxDB)
+5. Import grafana_ifdb_en/pl.json file (Dashboards->Manage->Import).
 Enjoy :)
 
 ### Added

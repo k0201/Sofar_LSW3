@@ -128,7 +128,7 @@ In order to enable Prometheus+Grafana support:
 In order to enable InfluxDB+Grafana support:
     1. Configure InfluxDB options in config.cfg
     2. Create database to store inverter data in InfluxDB (i.e. create database Data)
-    3. Add InfluxDB datasource in Grafana
+    3. Add InfluxDB datasource in Grafana (name it InfluxDB)
     4. Import grafana_iflux_en/pl.json file (Dashboards->Manage->Import).
     Enjoy :)
 ```
