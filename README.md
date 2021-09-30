@@ -125,7 +125,7 @@ You tell me :)
 Feel free to suggest, rewrite or add whatever you feel is necessary.
 
 # Home Assistant support (by jlopez77)
-MQTT support into Home Assistant:
+MQTT support into Home Assistant (untested !):
 ```
   - platform: mqtt
     name: "SofarInverter"
