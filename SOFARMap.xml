@@ -3,7 +3,7 @@
     "directory": "solar",
     "items": [
       {
-        "titleEN": "PV1 Power",
+        "titleEN": "PV1_Power",
         "titlePL": "Moc PV1",
         "registers": ["0x000A"],
         "parserRule": 1,
@@ -17,7 +17,7 @@
         "label_value": "PV1"
       },
       {
-        "titleEN": "PV2 Power",
+        "titleEN": "PV2_Power",
         "titlePL": "Moc PV2",
         "registers": ["0x000B"],
         "parserRule": 1,
@@ -31,7 +31,7 @@
         "label_value": "PV2"
       },
       {
-        "titleEN": "PV1 Voltage",
+        "titleEN": "PV1_Voltage",
         "titlePL": "Napięcie PV1",
         "registers": ["0x0006"],
         "parserRule": 1,
@@ -45,7 +45,7 @@
         "label_value": "PV1"
       },
       {
-        "titleEN": "PV2 Voltage",
+        "titleEN": "PV2_Voltage",
         "titlePL": "Napięcie PV2",
         "registers": ["0x0008"],
         "parserRule": 1,
@@ -59,7 +59,7 @@
         "label_value": "PV2"
       },
       {
-        "titleEN": "PV1 Current",
+        "titleEN": "PV1_Current",
         "titlePL": "Prąd PV1",
         "registers": ["0x0007"],
         "parserRule": 1,
@@ -73,7 +73,7 @@
         "label_value": "PV1"
       },
       {
-        "titleEN": "PV2 Current",
+        "titleEN": "PV2_Current",
         "titlePL": "Prąd PV2",
         "registers": ["0x0009"],
         "parserRule": 1,
@@ -87,7 +87,7 @@
         "label_value": "PV2"
       },
       {
-        "titleEN": "Today production",
+        "titleEN": "Today_production",
         "titlePL": "Dzienna produkcja",
         "registers": ["0x0019"],
         "parserRule": 1,
@@ -101,7 +101,7 @@
         "label_value": "Today"
       },
       {
-        "titleEN": "Total production",
+        "titleEN": "Total_production",
         "titlePL": "Całkowita produkcja",
         "registers": ["0x0015","0x0016"],
         "parserRule": 2,
@@ -115,7 +115,7 @@
         "label_value": "Total"
       },
       {
-        "titleEN": "Total generation time",
+        "titleEN": "Total_generation_time",
         "titlePL": "Całkowity Czas pracy",
         "registers": ["0x0017","0x0018"],
         "parserRule": 2,
@@ -129,7 +129,7 @@
         "label_value": "Total"
       },
       {
-        "titleEN": "Today generation time",
+        "titleEN": "Today_generation_time",
         "titlePL": "Dzisiejszy czas pracy",
         "registers": ["0x001A"],
         "parserRule": 1,
@@ -148,7 +148,7 @@
     "directory": "Output",
     "items": [
       {
-        "titleEN": "Output active power",
+        "titleEN": "Output_active_power",
         "titlePL": "Moc czynna",
         "registers": ["0x000C"],
         "optionRanges": [],
@@ -161,7 +161,7 @@
         "label_value": "Active"
       },
       {
-        "titleEN": "Output reactive power",
+        "titleEN": "Output_reactive_power",
         "titlePL": "Moc bierna",
         "registers": ["0x000D"],
         "parserRule": 1,
@@ -175,7 +175,7 @@
         "label_value": "Reactive"
       },
       {
-        "titleEN": "Grid frequency",
+        "titleEN": "Grid_frequency",
         "titlePL": "Częstotliwość sieci",
         "registers": ["0x000E"],
         "parserRule": 1,
@@ -189,7 +189,7 @@
         "label_value": "Frequency"
       },
       {
-        "titleEN": "L1 Voltage",
+        "titleEN": "L1_Voltage",
         "titlePL": "Napięcie L1",
         "registers": ["0x000F"],
         "parserRule": 1,
@@ -203,7 +203,7 @@
         "label_value": "L1"
       },
       {
-        "titleEN": "L1 Current",
+        "titleEN": "L1_Current",
         "titlePL": "Prąd L1",
         "registers": ["0x0010"],
         "parserRule": 2,
@@ -217,7 +217,7 @@
         "label_value": "L1"
       },
       {
-        "titleEN": "L2 Voltage",
+        "titleEN": "L2_Voltage",
         "titlePL": "Napięcie L2",
         "registers": ["0x0011"],
         "parserRule": 1,
@@ -231,7 +231,7 @@
         "label_value": "L2"
       },
       {
-        "titleEN": "L2 Current",
+        "titleEN": "L2_Current",
         "titlePL": "Prąd L2",
         "registers": ["0x0012"],
         "parserRule": 2,
@@ -245,7 +245,7 @@
         "label_value": "L2"
       },
       {
-        "titleEN": "L3 Voltage",
+        "titleEN": "L3_Voltage",
         "titlePL": "Napięcie L3",
         "registers": ["0x0013"],
         "parserRule": 1,
@@ -259,7 +259,7 @@
         "label_value": "L3"
       },
       {
-        "titleEN": "L3 Current",
+        "titleEN": "L3_Current",
         "titlePL": "Prąd L3",
         "registers": ["0x0014"],
         "parserRule": 2,
@@ -278,7 +278,7 @@
     "directory": "Inverter",
     "items": [
       {
-        "titleEN": "Inverter status",
+        "titleEN": "Inverter_status",
         "titlePL": "Status",
         "registers": ["0x0000"],
         "parserRule": 1,
@@ -319,13 +319,13 @@
         "label_value": "Status"
       },
       {
-        "titleEN": "Inverter module temperature",
+        "titleEN": "Inverter_module_temperature",
         "titlePL": "Temperatura modułu",
         "registers": ["0x001B"],
         "parserRule": 2,
         "optionRanges": [],
         "ratio": 1,
-        "unit": "ºC",
+        "unit": "C",
         "graph": 1,
         "metric_type": "gauge",
         "metric_name": "InverterTemp_celsius",
@@ -333,13 +333,13 @@
         "label_value": "Module"        
       },
       {
-        "titleEN": "Inverter inner termperature",
+        "titleEN": "Inverter_inner_termperature",
         "titlePL": "Temperatura falownika",
         "registers": ["0x001C"],
         "parserRule": 2,
         "optionRanges": [],
         "ratio": 1,
-        "unit": "ºC",
+        "unit": "C",
         "graph": 1,
         "metric_type": "gauge",
         "metric_name": "InverterTemp_celsius",
@@ -347,7 +347,7 @@
         "label_value": "Inner"
       },
       {
-        "titleEN": "Inverter bus voltage",
+        "titleEN": "Inverter_bus_voltage",
         "titlePL": "Napięcie szyny falownika",
         "registers": ["0x001D"],
         "parserRule": 2,
@@ -361,7 +361,7 @@
         "label_value": "Bus"
       },
       {
-        "titleEN": "PV1 voltage sample by slave CPU",
+        "titleEN": "PV1_voltage_sample_by_slave_CPU",
         "titlePL": "PV1 voltage sample by slave CPU",
         "registers": ["0x001E"],
         "parserRule": 2,
@@ -375,7 +375,7 @@
         "label_value": "PV1VoltageSample"
       },
       {
-        "titleEN": "PV1 current sample by slave CPU",
+        "titleEN": "PV1_current_sample_by_slave_CPU",
         "titlePL": "PV1 current sample by slave CPU",
         "registers": ["0x001F"],
         "parserRule": 2,
@@ -389,7 +389,7 @@
         "label_value": "PV1CurrentSample"
       }, 
       {
-        "titleEN": "Countdown time",
+        "titleEN": "Countdown_time",
         "titlePL": "Czas próbkowania",
         "registers": ["0x0020"],
         "parserRule": 2,
@@ -403,7 +403,7 @@
         "label_value": "Countdown"
       },
       {
-        "titleEN": "Inverter alert message",
+        "titleEN": "Inverter_alert_message",
         "titlePL": "Wiadomość alarmowa",
         "registers": ["0x0021"],
         "parserRule": 2,
@@ -417,7 +417,7 @@
         "label_value": "Message"
       },
       {
-        "titleEN": "Input mode",
+        "titleEN": "Input_mode",
         "titlePL": "Input mode",
         "registers": ["0x0022"],
         "parserRule": 2,
@@ -431,7 +431,7 @@
         "label_value": "Mode"
       },
       {
-        "titleEN": "Communication Board inner message",
+        "titleEN": "Communication_Board_inner_message",
         "titlePL": "Wewnętrzny komunikat szyny",
         "registers": ["0x0023"],
         "parserRule": 1,
@@ -445,7 +445,7 @@
         "label_value": "BoardInnerMsg"
       },
       {
-        "titleEN": "Insulation of PV1+ to ground",
+        "titleEN": "Insulation_of_PV1p_to_ground",
         "titlePL": "Izolacja PV1+ względem ziemi",
         "registers": ["0x0024"],
         "parserRule": 1,
@@ -459,7 +459,7 @@
         "label_value": "PV1"
       },
       {
-        "titleEN": "Insulation of PV2+ to ground",
+        "titleEN": "Insulation_of_PV2p_to_ground",
         "titlePL": "Izolacja PV2+ względem ziemi",
         "registers": ["0x0025"],
         "parserRule": 1,
@@ -473,7 +473,7 @@
         "label_value": "PV2"
       },
       {
-        "titleEN": "Insulation of PV- to ground",
+        "titleEN": "Insulation_of_PVm_to_ground",
         "titlePL": "Izolacja PV- względem ziemi",
         "registers": ["0x0026"],
         "parserRule": 1,
@@ -657,7 +657,7 @@
     "directory": "DCInput",
     "items": [
       {
-        "titleEN": "String 1 voltage",
+        "titleEN": "String_1_voltage",
         "titlePL": "Napięcie string 1",
         "registers": ["0x0105"],
         "parserRule": 1,
@@ -671,7 +671,7 @@
         "label_value": "String1"
       },
       {
-        "titleEN": "String 1 current",
+        "titleEN": "String_1_current",
         "titlePL": "Prąd string 1",
         "registers": ["0x0106"],
         "parserRule": 1,
@@ -685,7 +685,7 @@
         "label_value": "String1"
       },
       {
-        "titleEN": "String 2 voltage",
+        "titleEN": "String_2_voltage",
         "titlePL": "Napięcie string 2",
         "registers": ["0x0107"],
         "parserRule": 1,
@@ -699,7 +699,7 @@
         "label_value": "String2"
       },
       {
-        "titleEN": "String 2 current",
+        "titleEN": "String_2_current",
         "titlePL": "Prąd string 2",
         "registers": ["0x0108"],
         "parserRule": 1,
@@ -713,7 +713,7 @@
         "label_value": "String2"
       },
       {
-        "titleEN": "String 3 voltage",
+        "titleEN": "String_3_voltage",
         "titlePL": "Napięcie string 3",
         "registers": ["0x0109"],
         "parserRule": 1,
@@ -727,7 +727,7 @@
         "label_value": "String3"
       },
       {
-        "titleEN": "String 3 current",
+        "titleEN": "String_3_current",
         "titlePL": "Prąd string 3",
         "registers": ["0x010A"],
         "parserRule": 1,
@@ -741,7 +741,7 @@
         "label_value": "String3"
       },
       {
-        "titleEN": "String 4 voltage",
+        "titleEN": "String_4_voltage",
         "titlePL": "Napięcie string 4",
         "registers": ["0x010B"],
         "parserRule": 1,
@@ -755,7 +755,7 @@
         "label_value": "String4"
       },
       {
-        "titleEN": "String 4 current",
+        "titleEN": "String_4_current",
         "titlePL": "Prąd string 4",
         "registers": ["0x010C"],
         "parserRule": 1,
@@ -769,7 +769,7 @@
         "label_value": "String4"
       },
       {
-        "titleEN": "String 5 voltage",
+        "titleEN": "String_5_voltage",
         "titlePL": "Napięcie string 5",
         "registers": ["0x010D"],
         "parserRule": 1,
@@ -783,7 +783,7 @@
         "label_value": "String5"
       },
       {
-        "titleEN": "String 5 current",
+        "titleEN": "String_5_current",
         "titlePL": "Prąd string 5",
         "registers": ["0x010E"],
         "parserRule": 1,
@@ -797,7 +797,7 @@
         "label_value": "String5"
       },
       {
-        "titleEN": "String 6 voltage",
+        "titleEN": "String_6_voltage",
         "titlePL": "Napięcie string 6",
         "registers": ["0x010F"],
         "parserRule": 1,
@@ -811,7 +811,7 @@
         "label_value": "String6"
       },
       {
-        "titleEN": "String 6 current",
+        "titleEN": "String_6_current",
         "titlePL": "Prąd string 6",
         "registers": ["0x0110"],
         "parserRule": 1,
@@ -825,7 +825,7 @@
         "label_value": "String6"
       },
       {
-        "titleEN": "String 7 voltage",
+        "titleEN": "String_7_voltage",
         "titlePL": "Napięcie string 7",
         "registers": ["0x0111"],
         "parserRule": 1,
@@ -839,7 +839,7 @@
         "label_value": "String7"
       },
       {
-        "titleEN": "String 7 current",
+        "titleEN": "String_7_current",
         "titlePL": "Prąd string 7",
         "registers": ["0x0112"],
         "parserRule": 1,
@@ -853,7 +853,7 @@
         "label_value": "String7"
       },
       {
-        "titleEN": "String 8 voltage",
+        "titleEN": "String_8_voltage",
         "titlePL": "Napięcie string 8",
         "registers": ["0x0113"],
         "parserRule": 1,
@@ -867,7 +867,7 @@
         "label_value": "String8"
       },
       {
-        "titleEN": "String 8 current",
+        "titleEN": "String_8_current",
         "titlePL": "Prąd string 8",
         "registers": ["0x0114"],
         "parserRule": 1,
@@ -886,7 +886,7 @@
     "directory": "Alert",
     "items": [
       {
-        "titleEN": "Fault 1",
+        "titleEN": "Fault_1",
         "titlePL": "Kod błędu 1",
         "registers": ["0x0001"],
         "parserRule": 1,
@@ -900,7 +900,7 @@
         "label_value": "Code1"
       },
       {
-        "titleEN": "Fault 2",
+        "titleEN": "Fault_2",
         "titlePL": "Kod błędu 2",
         "registers": ["0x0002"],
         "parserRule": 1,
@@ -914,7 +914,7 @@
         "label_value": "Code2"
       },
       {
-        "titleEN": "Fault 3",
+        "titleEN": "Fault_3",
         "titlePL": "Kod błędu 3",
         "registers": ["0x0003"],
         "parserRule": 1,
@@ -928,7 +928,7 @@
         "label_value": "Code3"
       },
       {
-        "titleEN": "Fault 4",
+        "titleEN": "Fault_4",
         "titlePL": "Kod błędu 4",
         "registers": ["0x0004"],
         "parserRule": 1,
@@ -942,7 +942,7 @@
         "label_value": "Code4"
       },
       {
-        "titleEN": "Fault 5",
+        "titleEN": "Fault_5",
         "titlePL": "Kod błędu 5",
         "registers": ["0x0005"],
         "parserRule": 1,

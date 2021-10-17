@@ -14,6 +14,7 @@ import configparser
 import datetime
 import csv
 import ast
+import mysql.connector
 from influxdb import InfluxDBClient
 from datetime import datetime
 
@@ -188,14 +189,14 @@ while chunks<2:
          PMetrics(prometheus_file, metric_name, metric_type, label_name, label_value, response)
         if influxdb=="1" and graph==1: PrepareInfluxData(InfluxData, metric_name.split('_')[0]+"_"+label_value, response);
         if unit!="":
-            output=output+"\""+ title + " (" + unit + ")" + "\":" + str(response)+","
+            output=output+"\""+ title + "_" + unit +  "\":" + str(response)+","
         else:
             output=output+"\""+ title + "\":" + str(response)+","
        if hexpos=='0x0015': totalpower+=response*ratio*65536;
        if hexpos=='0x0016':
         totalpower+=response*ratio
         if verbose=="1": print(hexpos+" - "+title+": "+str(response*ratio)+unit);
-        output=output+"\""+ title + " (" + unit + ")" + "\":" + str(totalpower)+","
+        output=output+"\""+ title + "_" + unit + "\":" + str(totalpower)+","
         if prometheus=="1" and graph==1:
          PMetrics(prometheus_file, metric_name, metric_type, label_name, label_value, (totalpower*1000))
         if influxdb=="1" and graph==1: PrepareInfluxData(InfluxData, metric_name.split('_')[0]+"_"+label_value, totalpower);
@@ -203,7 +204,7 @@ while chunks<2:
        if hexpos=='0x0018':
         totaltime+=response*ratio
         if verbose=="1": print(hexpos+" - "+title+": "+str(response*ratio)+unit);
-        output=output+"\""+ title + " (" + unit + ")" + "\":" + str(totaltime)+","
+        output=output+"\""+ title + "_" + unit + "\":" + str(totaltime)+","
         if prometheus=="1" and graph==1:
          PMetrics(prometheus_file, metric_name, metric_type, label_name, label_value, totaltime)
         if influxdb=="1" and graph==1: PrepareInfluxData(InfluxData, metric_name.split('_')[0]+"_"+label_value, totaltime);
@@ -233,13 +234,12 @@ if mqtt==1:
 # CSV output integration
 if csv_output==1 :
  dictoutput = ast.literal_eval(output)
- dict ={"timestamp": datetime.now().strftime("%Y-%m-%d %H:%M")}
+ dict ={"timestamp": int(datetime.now().timestamp())}
  dict.update(dictoutput)
  csvfilename=csv_file_name+".csv"
  if (not os.path.exists(csvfilename)):
     with open(csvfilename,'w',newline='',encoding='utf8') as f:
         w=csv.writer(f)
-        #w=csv.writer(sys.stderr)
         w.writerow(dict.keys())
         w.writerow(dict.values())   
  else:
@@ -251,3 +251,18 @@ if mqtt!=1 and csv_output!=1:
     print(json.dumps(jsonoutput, indent=4, sort_keys=False, ensure_ascii=False))    
  
  
+columns = ', '.join("`" + str(x).replace('/', '_') + "`" for x in dict.keys())
+values = ', '.join("'" + str(x).replace('/', '_') + "'" for x in dict.values())
+sql = "INSERT INTO %s ( %s ) VALUES ( %s );" % ('sofar', columns, values)
+dbcon = mysql.connector.connect(
+      host=configParser.get('Database', 'db_host'),
+      user=configParser.get('Database', 'db_user'),
+      password=configParser.get('Database', 'db_password'),
+      database=configParser.get('Database', 'db_name')
+    )
+cursor = dbcon.cursor()
+cursor.execute(sql) 
+dbcon.commit()
+cursor.close()
+dbcon.close()
+
